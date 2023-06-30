@@ -1,0 +1,51 @@
+ <div class="table-header">
+  <label class="container-org">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Buscar">
+      <span class="search-icon"><i class="fas fa-search"></i></span>
+    </div>
+    <button class="sort" (click)="toggleSortOrder()">
+      <i [class]="sortOrder === 'asc' ? 'fas fa-sort-amount-down-alt' : 'fas fa-sort-amount-up'"></i>
+      Ordenar
+    </button>
+  </label>
+  <button class="export">
+    <img src="../../../assets/icons/upload.svg" alt="" srcset="">
+    Exportar
+  </button>
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th><input class="checkbox" type="checkbox" name="" id=""></th>
+        <th *ngFor="let colum of colums">{{ colum }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pago of pagos">
+        <td><input class="checkbox" type="checkbox" name="" id=""></td>
+        <td>
+          <div><a href="">{{ pago?.id | uppercase }}</a></div>
+          <div><small>{{ pago?.cuotas }} items</small></div>
+        </td>
+        <td>
+          <div>{{ pago?.proveedor?.nombre }}</div>
+          <div><small>{{ pago?.proveedor?.nit }}</small></div>
+        </td>
+        <td>{{ pago?.proveedor?.categoria }}</td>
+        <td>{{ pago?.vence }}</td>
+        <td>{{ pago?.valor }}</td>
+        <td>
+          <div>{{ pago?.responsable?.nombre }}</div>
+          <small>{{ pago?.responsable?.cargo }}</small>
+        </td>
+        <td>
+          <a href="">{{ pago?.estado }}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-paginator [totalRecords]="100" [recordsPerPage]="20" (pageChange)="onPageChange($event)"></app-paginator>

@@ -1,0 +1,36 @@
+<form (ngSubmit)="send()" autocomplete="off" [formGroup]="formAuth" class="container-auth">
+    <p>
+      <ng-container *ngIf="!validEmail; else elseTemplate">
+      <div class="title-form">
+        <span>Iniciar sesión</span>
+      </div>
+        <p class="msg">Ingresa tu correo electrónico</p>
+        <app-input>
+          <input id="name" class="input" type="text" pattern=".+" formControlName="email" required />
+          <label class="label" for="name">Correo electrónico</label>
+        </app-input>
+      <div class="container-button">
+        <button class="btn" (click)="validEmail=formAuth.controls['email'].valid">Continuar</button>
+      </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="title-form">
+        <img src="../../../assets/icons/arow.svg" (click)="validEmail=!validEmail" alt="" srcset="">
+        <span>Iniciar sesión</span>
+      </div>
+        <p class="msg">{{ 'ingsof2006@hotmail.com' }}</p>
+        <app-input>
+          <input id="name" class="input" [type]="see?'password':'text'" pattern=".+" formControlName="password" required />
+          <label class="label" for="name">Contraseña</label>
+          <span (click)="see=!see" class="icon material-symbols-outlined">
+            {{ see?"visibility_off":"visibility" }}
+          </span>
+        </app-input>
+        <div class="link-password"><a class="link" href="http://">Olvidé mi contraseña</a></div>
+      <div class="container-button" style="margin-top: 34px">
+        <button class="btn">Iniciar sesión</button>
+      </div>
+      <a class="link" href="http://">Iniciar sesión con clave dinámica</a>
+    </ng-template>
+    </p>
+</form>

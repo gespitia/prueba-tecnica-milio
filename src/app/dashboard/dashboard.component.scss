@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+}
+// .container-app{
+//   width: max-content;
+// }
+.container-perfil {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  float: left;
+  font-family: Satoshi;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  label {
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    height: 32px;
+    width: 18px;
+    padding: 9px 15px;
+    background-color: #819bff;
+    border-radius: 50%;
+    border: #819bff 1px solid;
+    margin-right: 10px;
+  }
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}

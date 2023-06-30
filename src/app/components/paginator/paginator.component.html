@@ -1,0 +1,13 @@
+<div class="paginator">
+  <div class="paginator-message">
+    {{ currentPageStart }} - {{ currentPageEnd }}  de {{ totalRecords }} registros
+  </div>
+  <div class="paginator-controls">
+    <span class="paginator-button" (click)="goToPreviousPage()">&lt;</span>
+    <span class="paginator-page" *ngFor="let page of pages" [class.active]="page === currentPage" (click)="goToPage(page)">{{ page }}</span>
+    <span class="paginator-button" (click)="goToNextPage()">&gt;</span>
+  </div>
+  <div class="paginator-info">
+    {{ ' ' + recordsPerPage }} / páginas
+  </div>
+</div>

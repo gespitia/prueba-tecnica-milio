@@ -1,0 +1,53 @@
+.input-container {
+  position: relative;
+  border: solid 0.5px #707070;
+  border-radius: 10px;
+  padding: 10px 5px;
+  label {
+    top: 10px;
+    left: 10px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    width: fit-content;
+    padding: 4px 2px;
+    cursor: text;
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+  }
+  input {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    width: 95%;
+    border: 0;
+    margin-top: 12px;
+    margin-inline: 10px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+    :valid,
+    :focus {
+      border-bottom: 2px solid #26a69a;
+    }
+  }
+}
+input,
+label {
+  font-size: 22px;
+}
+/* Interation */
+input:valid + label,
+input:focus + label {
+  font-size: 16px;
+  top: -18px;
+  pointer-events: none;
+}
+.icon {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}

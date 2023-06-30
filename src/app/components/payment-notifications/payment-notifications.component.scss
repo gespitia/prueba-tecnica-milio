@@ -1,0 +1,93 @@
+:host {
+  font-family: "Satoshi", sans-serif;
+}
+
+.float-button{
+  position: absolute;
+  width: 140px;
+  height: 50px;
+  color: #0136FE;
+  border: 2px solid #0136FE;
+  border-radius: 30px;
+  top: 88px;
+  right: 87px;
+}
+
+.payments-container {
+  text-align: start;
+  padding: 0 20px; /* Ajusta el valor del padding según tus necesidades */
+  margin: 0 auto;
+  .title-payments {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .payment-states {
+    margin: 42px 0 70px;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    li {
+      font-weight: 500;
+      font-size: 22px;
+      list-style: none;
+      width: max-content;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+  span {
+    width: 72px;
+    margin-right: 20px;
+  }
+  small {
+    position: relative;
+    font-family: Satoshi;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #809bff;
+    color: #809bff;
+    padding: 5px 10px;
+    top: -12px;
+  }
+}
+
+.payment-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  .item-detail {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: start;
+    padding-right: 80px;
+    border-right: 1px solid black;
+  }
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 41px;
+  }
+  p span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+.active-state {
+  border-bottom: 4px #809bff solid;
+  padding-bottom: 5px;
+}
+
+.active-badge {
+  background-color: #809bff;
+  color: white !important;
+}

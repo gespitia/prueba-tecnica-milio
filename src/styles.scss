@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+}
+
+/* Otras variantes de la fuente, si las tienes */
+div {
+  width: 100%;
+  box-sizing: border-box;
+}
